@@ -1,0 +1,4 @@
+# ignore all .tif files (data) and .py files (preliminary processing that was needed for my files specifically but won't be applicable in general)
+*.tif
+*.py
+*.txt
