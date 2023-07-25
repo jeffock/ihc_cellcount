@@ -1,5 +1,12 @@
-# ignore all .tif files (data) and .py files (preliminary processing that was needed for my files specifically but won't be applicable in general)
+
 *.tif
-*.py
 *.txt
-*.jpeg
+*.jpg
+*.png
+*.mat
+*.pyc
+
+data_prep.ipynb
+quick.py
+quick2.py
+gt_mat_gen.asv
