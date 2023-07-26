@@ -12,7 +12,7 @@ ImageFiles = dir(filePattern);
 n = length(ImageFiles)
 read_path = 'images/';
 store_path = 'ground_truth/';
-t = 1;                          %number of files initially in gound_truth set
+t = 10;                          %number of files initially in gound_truth set
 
 for i=1:n
     im = imread([read_path 'IMG_' num2str(i+t) '.jpg']);

@@ -5,8 +5,11 @@
 *.png
 *.mat
 *.pyc
+*.h5
 
 data_prep.ipynb
 quick.py
 quick2.py
 gt_mat_gen.asv
+
+Backups/
