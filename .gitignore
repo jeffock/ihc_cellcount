@@ -5,7 +5,9 @@
 *.png
 *.mat
 *.h5
-*.pth.tar
+
+0checkpoint.pth.tar
+0model_best.pth.tar
 
 data_prep.ipynb
 quick.py
