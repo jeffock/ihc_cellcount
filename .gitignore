@@ -5,6 +5,7 @@
 *.png
 *.mat
 *.h5
+*.pth.tar
 
 data_prep.ipynb
 quick.py
