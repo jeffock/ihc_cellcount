@@ -4,7 +4,6 @@
 *.jpg
 *.png
 *.mat
-*.pyc
 *.h5
 
 data_prep.ipynb
@@ -13,3 +12,4 @@ quick2.py
 gt_mat_gen.asv
 
 Backups/
+__pycache__/
