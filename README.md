@@ -2,11 +2,11 @@
 
 # Results:
 ___
->Annotated cell count: 48![original heatmap](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/originalh5.png)
+>Annotated cell count: 48               ![original heatmap](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/originalh5.png)
 ___
->Predicted cell count: 47![model heatmap](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/predictedh5.png)
+>Predicted cell count: 47               ![model heatmap](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/predictedh5.png)
 ___
->Original image: cytokeratin 14 stain![original image](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/originaljpg.png)
+>Original image: cytokeratin 14 stain               ![original image](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/originaljpg.png)
 
 # TO-DO before you start:
 ___
