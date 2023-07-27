@@ -10,12 +10,12 @@ Predicted cell count: 47
 ___
 >![model heatmap](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/predictedh5.png)
 ___
-Original image: cytokeratin 14 stain
+Original image: cytokeratin 14 (KRT14) stain
 ___
 >![original image](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/originaljpg.png)
 ___
 
-The MAE for the this model was 29.70, which isn't bad for the limited amount of data available to me, but could be better, it is also to be said that keratin stains can be much more difficult for NN to count due to the rampant background. The nuclei stains such as DAPI and Ki67 will likely perform better, it is just taking me a while to annotate.
+The MAE for the this model was 29.70, which isn't bad for the limited amount of data available to me, but could be better, it is also to be said that keratin stains can be much more difficult for NN to count due to the rampant background (it may also be explained by the fact that some cell counts were in the hundreds, making MAE=30 more reasonable compared to the context of the example given above). The nuclei stains such as DAPI and Ki67 will likely perform better, it is just taking me a while to annotate.
 
 # TO-DO before you start:
 ___
