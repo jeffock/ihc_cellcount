@@ -1,5 +1,14 @@
 [![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://jupyter.org/try)
 
+# Results:
+___
+Annotated cell count: 48
+![original heatmap](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/originalh5.png)
+Predicted cell count: 47
+![model heatmap](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/predictedh5.png)
+Original image: cytokeratin 14 stain
+![original image](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/originaljpg.png)
+
 # TO-DO before you start:
 ___
 You will need to add a \Data directory in the directory where the code resides.
