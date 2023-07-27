@@ -18,7 +18,7 @@ Note that this program was developed with KRT14, KRT5, Ki67, and DAPI stains. Ea
 
 # Credit
 ___
-Original CSRNet repo: [[https://github.com/leeyeehoo/CSRNet-pytorch/tree/master]]
+Original CSRNet repo: [[https://github.com/leeyeehoo/CSRNet-pytorch/tree/master]]\n
 Original annotation repo: [[https://github.com/princenarula222/Crowd_Annotation]]
 
 
