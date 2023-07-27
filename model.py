@@ -4,13 +4,13 @@ from torchvision import models
 from utils import save_net,load_net
 
 class CSRNet(nn.Module):
-    def __init__(self, load_weights=False):
+    def __init__(self, load_weights=False, do_rate=0.5):
         super(CSRNet, self).__init__()
         self.seen = 0
         self.frontend_feat = [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 'M', 512, 512, 512]
         self.backend_feat  = [512, 512, 512,256,128,64]
-        self.frontend = make_layers(self.frontend_feat)
-        self.backend = make_layers(self.backend_feat,in_channels = 512,dilation = True)
+        self.frontend = make_layers(self.frontend_feat, in_channels = 3, batch_norm=False, dilation=True, dropout_rate=do_rate)
+        self.backend = make_layers(self.backend_feat,in_channels = 512,batch_norm=False, dilation = True, dropout_rate=do_rate)
         self.output_layer = nn.Conv2d(64, 1, kernel_size=1)
         if not load_weights:
             mod = models.vgg16(pretrained = True)
@@ -33,7 +33,7 @@ class CSRNet(nn.Module):
                 nn.init.constant_(m.bias, 0)
             
                 
-def make_layers(cfg, in_channels = 3,batch_norm=False,dilation = False):
+def make_layers(cfg, in_channels = 3,batch_norm=False,dilation = False, dropout_rate=0.5):
     if dilation:
         d_rate = 2
     else:
@@ -45,8 +45,8 @@ def make_layers(cfg, in_channels = 3,batch_norm=False,dilation = False):
         else:
             conv2d = nn.Conv2d(in_channels, v, kernel_size=3, padding=d_rate,dilation = d_rate)
             if batch_norm:
-                layers += [conv2d, nn.BatchNorm2d(v), nn.ReLU(inplace=True)]
+                layers += [conv2d, nn.BatchNorm2d(v), nn.ReLU(inplace=True), nn.Dropout2d(p=dropout_rate)]
             else:
-                layers += [conv2d, nn.ReLU(inplace=True)]
+                layers += [conv2d, nn.ReLU(inplace=True), nn.Dropout2d(p=dropout_rate)]
             in_channels = v
     return nn.Sequential(*layers)                

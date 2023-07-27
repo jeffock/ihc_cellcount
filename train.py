@@ -62,7 +62,7 @@ def main():
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
     torch.cuda.manual_seed(args.seed)
     
-    model = CSRNet()
+    model = CSRNet(dropout_rate=0.5)
     
     model = model.cuda()
     
