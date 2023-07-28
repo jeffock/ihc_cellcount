@@ -10,7 +10,6 @@
 0model_best.pth.tar
 
 data_prep.ipynb
-make_dataset.ipynb
 quick.py
 quick2.py
 gt_mat_gen.asv
