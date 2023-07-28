@@ -21,23 +21,26 @@ The MAE for the this model was 29.70, which isn't bad for the limited amount of 
 
 # TO-DO before you start:
 ___
-You will need to add a \Data directory in the directory where the code resides.
-You will also need to run auto_import.sh as specified by comments within the file.
+You will need to add data to the \Data directory.
+You will also need to run pkg_install.sh as specified by comments within the file.
 
 Note on packages, this model uses CUDA supported PyTorch, make sure you have the correct packages for this if you have an Nvidia GPU. 
 
 # Data:
 ___
 The file tree that I used for my data is included.
-Once you have your data in images, annotate them in MATLAB with the provided .m script in the keratin/ and nuclei/ directories.
+Once you have your data in ./images, annotate them in MATLAB with the provided .m script in the keratin/ and nuclei/ directories.
 Run make_dataset.ipynb to generate the needed .h5 files. 
 
-I will be adding my own data and annotations, once I finish annotating all of them, as zipped files. 
+Make .json files for validation, test, and train. Make an 10% 10% 80% split of the images in the files. Enter the file paths to the images you want in val, test, and train in list form. 
+
+I will be adding my own data and annotations, once I finish annotating all of them, as zipped files either in the repo or in a linked google drive. 
 
 # Training:
 ___
 First ensure that the .json files contain the correct file paths.
-To train run `python train.py krt_train.json krt_test.json 0 0`
+To train run: 
+`python train.py krt_train.json krt_test.json 0 0`
 
 # Testing:
 ___
