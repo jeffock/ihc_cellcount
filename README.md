@@ -17,7 +17,7 @@ ___
 
 The MAE for the this model was 29.70, which isn't bad for the limited amount of data available to me, but could be better, it is also to be said that keratin stains can be much more difficult for NN to count due to the rampant background (it may also be explained by the fact that some cell counts were in the hundreds, making MAE=30 more reasonable compared to the context of the example given above). The nuclei stains such as DAPI and Ki67 will likely perform better, it is just taking me a while to annotate.
 
-[model](https://drive.google.com/drive/folders/1XWFol9RQwbx_Q121FoCLfI6CCsahzKRY?usp=drive_link)
+[model google drive](https://drive.google.com/drive/folders/1XWFol9RQwbx_Q121FoCLfI6CCsahzKRY?usp=drive_link)
 
 # TO-DO before you start:
 ___
