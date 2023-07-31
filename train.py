@@ -1,5 +1,6 @@
 import sys
 import os
+import random
 
 import warnings
 
@@ -48,7 +49,7 @@ def main():
     args.momentum      = 0.95
     args.decay         = 5*1e-4
     args.start_epoch   = 0
-    args.epochs = 400
+    args.epochs = 600
     args.steps         = [-1,1,100,150]
     args.scales        = [1,1,1,1]
     args.workers = 4
@@ -58,6 +59,9 @@ def main():
         train_list = json.load(outfile)
     with open(args.test_json, 'r') as outfile:       
         val_list = json.load(outfile)
+
+    random.shuffle(train_list)
+    random.shuffle(val_list)
     
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
     torch.cuda.manual_seed(args.seed)
