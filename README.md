@@ -2,11 +2,11 @@
 
 # Results:
 ___
-Annotated cell count: 48
+Annotated cell count: 62
 ___
 >![original heatmap](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/originalh5.png)
 ___
-Predicted cell count: 47
+Predicted cell count: 60
 ___
 >![model heatmap](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/predictedh5.png)
 ___
@@ -15,7 +15,9 @@ ___
 >![original image](https://github.com/jeffock/ihc_cellcount/blob/temp/README%20Screenshots/originaljpg.png)
 ___
 
-The MAE for the this model was 29.70, which isn't bad for the limited amount of data available to me, but could be better, it is also to be said that keratin stains can be much more difficult for NN to count due to the rampant background (it may also be explained by the fact that some cell counts were in the hundreds, making MAE=30 more reasonable compared to the context of the example given above). The nuclei stains such as DAPI and Ki67 will likely perform better, it is just taking me a while to annotate.
+The MAE for the this model was 79.8, which isn't bad for the limited amount of data available to me, but could be better, it is also to be said that keratin stains can be much more difficult for NN to count due to the rampant background (it may also be explained by the fact that some cell counts were in the hundreds, making MAE=30 more reasonable compared to the context of the example given above). The nuclei stains such as DAPI and Ki67 will likely perform better, it is just taking me a while to annotate.
+
+Model also struggled with higher cell counts. 
 
 [model google drive](https://drive.google.com/drive/folders/1XWFol9RQwbx_Q121FoCLfI6CCsahzKRY?usp=drive_link)
 
